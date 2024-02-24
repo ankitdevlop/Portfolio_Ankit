@@ -28,7 +28,7 @@ if (formData=="") {
 }
     try {
       const response = await axios.post('https://ankiot-bakend-1.onrender.com/send-email', formData);
-      const response2 = await axios.post('https://ankiot-bakend-1.onrender.com/receive-message', formData);
+      // const response2 = await axios.post('https://ankiot-bakend-1.onrender.com/receive-message', formData);
 
       if (response.status === 200) {
         console.log('Email sent successfully');
