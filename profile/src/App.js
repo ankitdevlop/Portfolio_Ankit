@@ -6,6 +6,7 @@ import Footer from "./Componets/Footer";
 import Navbar from "./Componets/Navbar";
 import Preloader from "./Componets/Preloader";
 import Projects from "./Componets/Projects";
+import Form from "./Componets/Form";
 import Live from "./Live";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <Form/>
       <Navbar />
       <Footer/>
       

@@ -258,9 +258,9 @@ function About() {
           <br />
         </div>
         <div className="info" data-aos="zoom-in">
-          <h1> Backend Languages </h1>
+          <h1> React Native </h1>
           <h3 className="mt-3 text-2xl ml-6" id="topic">
-             Backend Languages To Become a Full-stack Developer
+           Learning React Native
           </h3>
           <img alt="" className="glow"  src="https://crowdbotics.ghost.io/content/images/2021/02/ReactNativeFeaturedImage.png" data-aos="zoom-in" />
           <p data-aos="zoom-in" data-aos-duration="1000">
