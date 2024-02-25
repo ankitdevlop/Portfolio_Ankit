@@ -450,18 +450,6 @@ font-size: 22px;
 }
 
 
-
-
-.tit{
-  margin-top: 23px;
-color:rgb(167, 185, 210);
-text-shadow: 2px 2px 2px black;
-font-weight: bolder;
-font-size: 45px;
-animation: animate 3s ease-in-out infinite
-
-}
-
 @keyframes animate 
 {
   0%,100%
@@ -471,11 +459,23 @@ animation: animate 3s ease-in-out infinite
   }
   50%
   {
-    transform: rotate(-0deg) skew(0deg) translate(50px,-50px);
+    transform: rotate(-0deg) skew(0deg) translate();
    text-shadow: -50px 50px 0 rgba(0,0,0,.2); 
    filter: blur(12px);
  }
 }
+
+.tit2{
+  margin-top: 23px;
+color:rgb(167, 185, 210);
+text-shadow: 2px 2px 2px black;
+font-weight: bolder;
+font-size: 45px;
+animation: animate 3s ease-in-out infinite;
+
+}
+
+
 * {
   cursor: none !important;
 
