@@ -21,7 +21,7 @@ import Node from "../Assets/nodejs.png";
 import cerf from "../Assets/crf.pdf";
 import cerf2 from "../Assets/nillcer.jpg";
 import cerf3 from "../Assets/1707146529034.jpg";
-import cv from "../Assets/cv.pdf";
+import cv from "../Assets/Ankit Dubey Resume.docx";
 import achivmetn from '../Assets/achivment.jpg'
 import nullc from '../Assets/null.png'
 
@@ -243,9 +243,6 @@ function About() {
         </div>
         <div className="info" data-aos="zoom-in">
           <h1> Backend Languages </h1>
-          <h3 className="mt-3 text-2xl ml-6" id="topic">
-             Backend Languages To Become a Full-stack Developer
-          </h3>
           <img alt="" className="glow"  src={back} data-aos="zoom-in" />
           <p data-aos="zoom-in" data-aos-duration="1000">
     I have already immersed myself in learning backend development with the MEAN stack. <br /> 
