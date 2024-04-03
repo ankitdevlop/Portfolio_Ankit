@@ -28,7 +28,7 @@ function Projects() {
 
     <div class="container">
 <h2 className='pro gradient-text ' data-aos-duration="1000" data-aos="fade-up" >Advance Projects </h2>
-        <div class="card">
+        <div class="card" data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={intern} alt="My"  className='w-48'/> 
@@ -42,7 +42,7 @@ function Projects() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={ecom} alt="My"  className='w-48'/> 
@@ -52,11 +52,11 @@ function Projects() {
             <div class="face face2">
                 <div class="content">
                     <p>An e-commerce platform built with the MERN stack, providing a user-friendly interface for browsing and purchasing products, though payment methods are not integrated</p>
-                    <a href='https://www.medoplanet.com/' target='_blank' rel="noreferrer">Visit Now</a>
+                    <p target='_blank' rel="noreferrer">Visit Now</p>
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={ask} alt="My"  className='w-48'/> 
@@ -70,7 +70,7 @@ function Projects() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={anime} alt="My"  className='w-48'/> 
@@ -84,7 +84,7 @@ function Projects() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={postman} alt="My"  className='w-48'/> 
@@ -98,7 +98,7 @@ function Projects() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={notes} alt="My"  className='w-48'/> 
@@ -119,7 +119,7 @@ function Projects() {
         <div className='container'>
 
  
-        <div class="card">
+        <div class="card" data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={tictac} alt="My"  className='w-48'/> 
@@ -133,7 +133,7 @@ function Projects() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={textana} alt="My"  className='w-48'/> 
@@ -147,7 +147,7 @@ function Projects() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={employee} alt="My"  className='w-48'/> 
@@ -161,7 +161,7 @@ function Projects() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={music} alt="My"  className='w-48'/> 
@@ -181,7 +181,7 @@ function Projects() {
         <h2 className='pro gradient-text  ' data-aos-duration="1000" data-aos="fade-up" >Basic
  Projects </h2>
         <div className='container'>
- <div class="card">
+ <div class="card"data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={mobile} alt="My"  className='w-48'/> 
@@ -195,7 +195,7 @@ function Projects() {
                 </div>
             </div>
         </div>
- <div class="card">
+ <div class="card"data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={video} alt="My"  className='w-48'/> 
@@ -209,7 +209,7 @@ function Projects() {
                 </div>
             </div>
         </div>
- <div class="card">
+ <div class="card"data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={landing2} alt="My"  className='w-48'/> 
@@ -223,7 +223,7 @@ function Projects() {
                 </div>
             </div>
         </div>
- <div class="card">
+ <div class="card"data-aos="zoom-in"  data-aos-duration="6000">
             <div class="face face1">
                 <div class="content">
                 <img src={gst} alt="My"  className='w-48'/> 

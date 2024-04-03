@@ -60,8 +60,7 @@ function About() {
       </h1>
       <div
         className="skills"
-        data-aos="slide-up"
-        data-aos-easing="ease-in"
+        data-aos="zoom-in"
         data-aos-duration="1000"
       >
         <img src={c} alt="" className="glow" />
@@ -96,11 +95,7 @@ function About() {
             insights into how real-world websites function
           </p>
           <div className="cv">
-            <button className="glow">
-              <a href={cerf} download>
-                Download certificate
-              </a>
-            </button>
+         
           </div>
           <img 
             alt="" className="glow"
@@ -112,11 +107,6 @@ function About() {
           This is my second internship where I work with technologies like Node.js, MongoDB, and Express. I have learned how real-world projects are made with the help of Nullclass internship, and I have been able to polish my MERN (MongoDB, Express.js, React, Node.js) skills. During this period, I created a full MERN app titled 'Ask Question,' which you can find in the project section
           </p>
           <div className="cv">
-            <button className="glow">
-              <a href={cerf2} download>
-                Download certificate
-              </a>
-            </button>
           </div>
           <br />
           <br />
@@ -130,11 +120,6 @@ function About() {
           <p data-aos="zoom-in" data-aos-duration="1000">
           This is my third and second internship in Nullclass where I made a MERN stack course for the Nullclass, and I also used Firebase for this. It was a very good experience with the Nullclass.          </p>
           <div className="cv">
-            <button className="glow">
-              <a href={cerf3} download>
-                Download certificate
-              </a>
-            </button>
           </div>
           <br />
           <br />
@@ -152,13 +137,6 @@ function About() {
           <p data-aos="zoom-in" data-aos-duration="1000">
           n this training, I learned about many concepts of MERN (MongoDB, Express, React, Node.js) and also how MongoDB Atlas works. I learned how to create a Stack Overflow clone using the MERN stack and how to connect with a database. In this training I made a Stack Overflow Clone also , I also discovered many interesting things. Currently, I am doing an internship at Null Class, which is one month long
           </p>
-          <div className="cv">
-            <button className="glow">
-              <a href={achivmetn} download>
-                Download certificate
-              </a>
-            </button>
-          </div>
           <br />
           <br />
           <br />
