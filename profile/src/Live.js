@@ -1,5 +1,5 @@
 import React from 'react'
-import code from './Assets/0225.mp4'
+import code from './Assets/225.mp4'
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -44,12 +44,15 @@ function Live() {
     return () => clearInterval(interval);
   }, [forwards, i, offset, skipCount, speed, words]);
   return (
-    <div className='main' id='home'>
-<video className="glow" src={code} autoPlay loop muted/>
+    <div className='main' id='home' style={{background:"#499e8e"}}>
+{/* <video className="glow" src={code} autoPlay loop muted/> */}
 <div className='title' >
-  <h1 className='tit2'>HI ! I AM ANKIT   </h1><br/>
-  <h4 className='tit2 font-extrabold'>AND I AM <br /> <div className="word text-teal-500 h-24">{part}</div></h4>
-
+<h1 className="tit2 text-black">HI ! I AM ANKIT</h1>
+<br/>
+<h4 className="tit2 font-extrabold text-black">
+  AND I AM <br />
+  <div className="word text-black h-24">{part}</div>
+</h4>
 
 </div>
   <div id="scroll-down-animation" className='scrooll'>

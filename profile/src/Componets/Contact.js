@@ -20,7 +20,7 @@ function Contact() {
     </div>
   
     <div class="flex   flex-col items-start text-center align-middle  w-full ">
-        <div class="text-2xl font-bold  my-2 ">New Website
+        <div class="text-2xl font-bold  my-2 ">
         </div>
         <div class="flex flex-col md:flex-row items-start md:items-center justify-start w-full md:w-3/4">
             <div class="flex m-2 md:mx-8">
