@@ -1,11 +1,8 @@
-import React from 'react'
-import code from './Assets/225.mp4'
-import { useState } from 'react';
-import { useEffect } from 'react';
-
+import React, { useState, useEffect } from 'react';
+import './Live.css';
 
 function Live() {
-  const [words] = useState(['FULL-STACK DEVELOPER','FRONT-END DEVELOPER', 'BACK-END DEVELOPER', ' FREELANCER', 'UI DESIGNER']);
+  const [words] = useState(['FULL-STACK DEVELOPER', 'FRONT-END DEVELOPER', 'BACK-END DEVELOPER', 'FREELANCER', 'UI DESIGNER', 'Native App Developer']);
   const [part, setPart] = useState('');
   const [i, setI] = useState(0);
   const [offset, setOffset] = useState(0);
@@ -43,28 +40,36 @@ function Live() {
     }, speed);
     return () => clearInterval(interval);
   }, [forwards, i, offset, skipCount, speed, words]);
+
   return (
-    <div className='main' id='home' style={{background:"#499e8e"}}>
-{/* <video className="glow" src={code} autoPlay loop muted/> */}
-<div className='title' >
-<h1 className="tit2 text-black">HI ! I AM ANKIT</h1>
-<br/>
-<h4 className="tit2 font-extrabold text-black">
-  AND I AM <br />
-  <div className="word text-black h-24">{part}</div>
-</h4>
+    <div className='hero-container' id='home'>
+      <div className='hero-background'>
+        <div className='animated-bg'></div>
+      </div>
+      
+      <div className='hero-content'>
+        <div className='hero-text'>
+          <h1 className="hero-greeting">Hi! I'm Ankit</h1>
+          <div className="hero-role">
+            <span className="role-prefix">And I'm a</span>
+            <div className="typing-text">
+              {part}<span className="cursor">|</span>
+            </div>
+          </div>
+          <p className="hero-description">
+            Passionate about creating beautiful, functional  App & web experiences
+          </p>
+        </div>
+      </div>
 
-</div>
-  <div id="scroll-down-animation" className='scrooll'>
-  <span class="mouse">
-    <span class="move"></span>
-  </span>
-  <h2>Scroll down</h2>
-</div>
-
-
+      <div className="scroll-indicator">
+        <div className="mouse">
+          <div className="wheel"></div>
+        </div>
+        <span>Scroll to explore</span>
+      </div>
     </div>
-     )
+  );
 }
 
-export default Live
+export default Live;

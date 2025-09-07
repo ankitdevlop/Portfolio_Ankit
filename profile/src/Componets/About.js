@@ -1,148 +1,149 @@
 import React from "react";
+import "./About.css";
 import bt from "../Assets/bootstrap.png";
 import cp from "../Assets/c++.png";
 import pg from "../Assets/postgress.png";
 import css from "../Assets/css.png";
 import express from "../Assets/express.png";
 import js from "../Assets/js.png";
+import ag from "../Assets/ag.png";
+import rn from "../Assets/rn.png";
 import react from "../Assets/react.png";
 import tail from "../Assets/tailwindcss.png";
 import git from "../Assets/github.png";
 import c from "../Assets/c.png";
+import java from "../Assets/java.png";
 import mg from "../Assets/mg.png";
 import html from "../Assets/html.png";
 import Node from "../Assets/nodejs.png";
-import cv from "../Assets/Ankit Dubey Resume.docx";
+import cv from "../Assets/ankitdubeyResume_updated.pdf";
 import nullc from '../Assets/null.png'
 import airrchip from '../Assets/Screenshot 2024-08-30 235831.png'
 
 function About() {
-  // Function to check if an element is in the viewport
+  const skills = [
+ 
+    { src: js, name: "JavaScript" },
+    { src: Node, name: "Node.js" },
+    { src: express, name: "Express" },
+    { src: react, name: "React" },
+    { src: ag, name: "Angular" },
+    { src: rn, name: "React Native" },
+    { src: git, name: "GitHub" },
+    { src: tail, name: "Tailwind" },
+    { src: bt, name: "Bootstrap" },
+    { src: pg, name: "PostgreSQL" },
+    { src: mg, name: "MongoDB" },
+    { src: c, name: "C" },
+    { src: cp, name: "C++" },
+    { src: html, name: "HTML" },
+    { src: css, name: "CSS" },
+    { src: java, name: "JAVA" },
+
+
+
+
+
+  ];
+
+  const experiences = [
+    {
+      company: "Tecnotree / Clarus Software Technologies",
+      image: "https://vectorseek.com/wp-content/uploads/2023/09/Tecnotree-Logo-Vector.svg-.png",
+      description: `Developing scalable React Native mobile applications with optimized performance and clean architecture.
+  Integrated APIs and handled state management for seamless cross-platform user experiences. Worked on deploying and testing apps for both iOS and Android .`
+    },
+    {
+      company: "AirChip",
+      image: airrchip,
+      description: "As a MERN Stack Developer, I specialize in building scalable web and mobile applications using ReactJS, Node.js, and Express. I create responsive UIs with Tailwind CSS and Bootstrap, while utilizing Redux and TypeScript for efficient state management and type safety."
+    },
+    {
+      company: "CodeClause",
+      image: "https://codeclause.com/assets/img/Main%20Logo.png",
+      description: "My first internship was at CodeClause from May to June. During this period, I learned about dynamic website development and backend systems, gaining insights into how real-world websites function."
+    },
+    {
+      company: "NullClass",
+      image: nullc,
+      description: "Second internship where I worked with Node.js, MongoDB, and Express. I polished my MERN skills and created a full MERN app titled 'Ask Question,' which you can find in the project section."
+    },
+    {
+      company: "NullClass",
+      image: nullc,
+      description: "Third internship at NullClass where I developed a MERN stack course and integrated Firebase. It was an excellent learning experience."
+    }
+  ];
 
   return (
-    <div id="about" className="hidden-element  ">
-      <div className="passion mt-5" data-aos="fade-up">
-        <h1 className="gradient-text">Creating Websites Since 2022</h1>
-
-        <p data-aos="zoom-in" data-aos-duration="1000">
-    My passion lies in creating websites and applications that are both beautiful and functional. <br />
-    With over a year and a half of experience in designing and coding, I've honed my skills in full-stack development, particularly with the MERN stack. <br />
-    <br />
-    Whether I'm crafting a sleek user interface or building robust backend systems, <br />
-    I'm always striving to create something unique and innovative. <br />
-    I enjoy experimenting with new technologies and staying up-to-date with the latest trends in the tech world. <br />
-    <br />
-    Alongside my expertise in React and Node.js, I have also transitioned into mobile development with React Native and have solid experience with PostgreSQL for database management. <br />
-    <br />
-    I'm always open to new opportunities and collaborations. <br />
-</p>
-
-        <div className="cv">
-          <button className="glow">
-            <a href={cv} download>
-              Download CV
-            </a>
+    <div className="about-container">
+      {/* Hero Section */}
+      <section className="hero-section" data-aos="fade-up">
+        <div className="container">
+          <h1 className="hero-title">Creating Websites Since 2022</h1>
+          <p className="hero-description">
+            My passion lies in creating websites and applications that are both beautiful and functional. 
+            With over a year and a half of experience in full-stack development, particularly with the MERN stack, 
+            I'm always striving to create something unique and innovative.
+          </p>
+          <button className="download-btn">
+            <a href={cv} download>Download CV</a>
           </button>
         </div>
-      </div>
-      <h1 className="ar" data-aos="fade-down">
-        Arsenal
-      </h1>
-      <div
-        className="skills"
-        data-aos="zoom-in"
-        data-aos-duration="500"
-      >
-        <img src={c} alt="" className="glow" />
-        <img src={cp} alt="" className="glow" />
-        <img src={html} alt="" className="glow" />
-        <img src={js} alt="" className="glow" />
-        <img src={css} alt="" className="glow" />
-        <img src={Node} alt="" className="glow" />
-        <img src={express} alt="" className="glow" />
-        <img src={react} alt="" className="glow" />
-        <img src={git} alt="" className="glow" />
-        <img src={tail} alt="" className="glow" />
-        <img src={bt} alt="" className="glow" />
-        <img src={pg} alt="" className="glow" />
-        <img src={mg} alt="" className="glow" />
-      </div>
+      </section>
 
-      <div className="education">
-        <div className="info" data-aos="zoom-in">
-        <h1 style={{textAlign:"center"}}>Experiences </h1>
-          <img
-            alt="" className="glow"
-            
-            src={airrchip}
-            data-aos="zoom-in"
-          />
-          <p data-aos="zoom-in" data-aos-duration="1000">
-          As a MERN Stack Developer, I specialize in building scalable web and mobile applications using ReactJS, Node.js, and Express. I create responsive UIs with Tailwind CSS and Bootstrap, while utilizing Redux and TypeScript for efficient state management and type safety. My backend expertise extends to microservices with Molecular JS and database management with MongoDB, MySQL, and PostgreSQL, ensuring robust and high-performance solutions across platforms.
-          </p>
-          <div className="cv">
-         
+      {/* Skills Section */}
+      <section className="skills-section" data-aos="fade-up">
+        <div className="container">
+          <h2 className="section-title">Tech Arsenal</h2>
+          <div className="skills-grid">
+            {skills.map((skill, index) => (
+              <div key={index} className="skill-item" data-aos="zoom-in" data-aos-delay={index * 100}>
+                <img src={skill.src} alt={skill.name} />
+                <span>{skill.name}</span>
+              </div>
+            ))}
           </div>
-          <img
-            alt="" className="glow"
-            
-            src="https://codeclause.com/assets/img/Main%20Logo.png"
-            data-aos="zoom-in"
-          />
-          <p data-aos="zoom-in" data-aos-duration="1000">
-            My first internship was at CodeCluse, which I attended from May to
-            June. During this internship period, I learned about dynamic website
-            development and website backend. In this span of time, I gained
-            insights into how real-world websites function
-          </p>
-          <div className="cv">
-         
-          </div>
-          <img 
-            alt="" className="glow"
-         
-            src={nullc}
-            data-aos="zoom-in"
-          />
-          <p data-aos="zoom-in" data-aos-duration="1000">
-          This is my second internship where I work with technologies like Node.js, MongoDB, and Express. I have learned how real-world projects are made with the help of Nullclass internship, and I have been able to polish my MERN (MongoDB, Express.js, React, Node.js) skills. During this period, I created a full MERN app titled 'Ask Question,' which you can find in the project section
-          </p>
-          <div className="cv">
-          </div>
-          <br />
-          <br />
-          <br />
-          <img 
-            alt="" className="glow"
-         
-            src={nullc}
-            data-aos="zoom-in"
-          />
-          <p data-aos="zoom-in" data-aos-duration="1000">
-          This is my third and second internship in Nullclass where I made a MERN stack course for the Nullclass, and I also used Firebase for this. It was a very good experience with the Nullclass.          </p>
-          <div className="cv">
-          </div>
-          <br />
-          <br />
-          <br />
         </div>
-        <div className="info" data-aos="zoom-in">
-          <h1>Training Attended </h1>
+      </section>
 
-          <img
-            alt="" className="glow"
-      
-            src={nullc}
-            data-aos="zoom-in"
-          />
-          <p data-aos="zoom-in" data-aos-duration="1000">
-          this training, I learned about many concepts of MERN (MongoDB, Express, React, Node.js) and also how MongoDB Atlas works. I learned how to create a Stack Overflow clone using the MERN stack and how to connect with a database. In this training I made a Stack Overflow Clone also , I also discovered many interesting things. Currently, I am doing an internship at Null Class, which is one month long
-          </p>
-          <br />
-          <br />
-          <br />
+      {/* Experience Section */}
+      <section className="experience-section" data-aos="fade-up">
+        <div className="container">
+          <h2 className="section-title">Professional Experience</h2>
+          <div className="experience-grid">
+            {experiences.map((exp, index) => (
+              <div key={index} className="experience-card" data-aos="fade-up" data-aos-delay={index * 200}>
+                <div className="card-image">
+                  <img src={exp.image} alt={exp.company} />
+                </div>
+                <div className="card-content">
+                  <h3>{exp.company}</h3>
+                  <p>{exp.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Training Section */}
+      <section className="training-section" data-aos="fade-up">
+        <div className="container">
+          <h2 className="section-title">Training & Certifications</h2>
+          <div className="training-card">
+            <img src={nullc} alt="NullClass Training" />
+            <div className="training-content">
+              <h3>MERN Stack Training - NullClass</h3>
+              <p>
+                Comprehensive training covering MERN stack concepts, MongoDB Atlas, 
+                and building a Stack Overflow clone. Gained practical experience in 
+                full-stack development and database management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

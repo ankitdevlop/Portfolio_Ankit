@@ -1,94 +1,119 @@
-import React from 'react'
-import {  AiFillGithub} from "react-icons/ai";
-import {  GrInstagram, GrMail} from "react-icons/gr";
-import {  TbBrandZoom, TbDeviceLandlinePhone} from "react-icons/tb";
-import {  FaLinkedin} from "react-icons/fa";
+import React from 'react';
+import './Contact.css';
+import { AiFillGithub } from "react-icons/ai";
+import { GrInstagram, GrMail } from "react-icons/gr";
+import { TbBrandZoom, TbDeviceLandlinePhone } from "react-icons/tb";
+import { FaLinkedin } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 
-
 function Contact() {
-  // Function to check if an element is in the viewport
+  const contactInfo = [
+    {
+      icon: <TbDeviceLandlinePhone />,
+      title: "Give us a Call",
+      content: "+91 7304627858",
+      link: "tel:+917304627858"
+    },
+    {
+      icon: <GrMail />,
+      title: "Send us an Email",
+      content: "ankitdubey58825@gmail.com",
+      link: "mailto:ankitdubey58825@gmail.com"
+    },
+    {
+      icon: <TbBrandZoom />,
+      title: "Virtual Meeting",
+      content: "Available on Zoom",
+      link: "#"
+    }
+  ];
+
+  const socialLinks = [
+    {
+      icon: <GrInstagram />,
+      title: "Instagram",
+      subtitle: "Follow my journey",
+      link: "https://www.instagram.com/iankitd/",
+      color: "#E4405F"
+    },
+    {
+      icon: <AiFillGithub />,
+      title: "GitHub",
+      subtitle: "View my code",
+      link: "https://github.com/ankitdevlop",
+      color: "#333"
+    },
+    {
+      icon: <FiTwitter />,
+      title: "Twitter",
+      subtitle: "Latest updates",
+      link: "https://twitter.com/dubey9850",
+      color: "#1DA1F2"
+    },
+    {
+      icon: <FaLinkedin />,
+      title: "LinkedIn",
+      subtitle: "Professional network",
+      link: "https://www.linkedin.com/in/ankit-dubey-799a1323a/",
+      color: "#0077B5"
+    }
+  ];
+
   return (
-    <div id='contact' className="hidden-element" >
-
-        <div class="flex justify-center ">
-
-<div class="flex flex-col justify-center w-[90%]  max-w-7xl  " id='cont' data-aos="zoom-in" data-aos-duration="1000">
-    <div class="flex flex-col justify-center items-center md:items-start  my-4">
-
-        <div class="gradient-text text-3xl md:text-3xl   font-bold uppercase">Contact Us</div>
-    </div>
-  
-    <div class="flex   flex-col items-start text-center align-middle  w-full ">
-        <div class="text-2xl font-bold  my-2 ">
+    <div className="contact-container">
+      <div className="contact-content">
+        <div className="contact-header" data-aos="fade-up">
+          <h1 className="contact-title">Let's Connect</h1>
+          <p className="contact-subtitle">Ready to start your next project? Let's build something amazing together.</p>
         </div>
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-start w-full md:w-3/4">
-            <div class="flex m-2 md:mx-8">
-            <span className='text-5xl'> <TbDeviceLandlinePhone/>   </span> 
-                <div class="mx-2">
-                    <div class="text-xl font-semibold ">Give us a Call</div>
-                    <div class=" font-medium"><a href="tel: +917304627858" > +91 7304627858 </a></div>
+
+        {/* Contact Information */}
+        <div className="contact-info-section" data-aos="fade-up" data-aos-delay="200">
+          <h2 className="section-title">Get In Touch</h2>
+          <div className="contact-grid">
+            {contactInfo.map((item, index) => (
+              <div key={index} className="contact-card" data-aos="zoom-in" data-aos-delay={index * 100}>
+                <div className="contact-icon">
+                  {item.icon}
                 </div>
-            </div>
-            <div class="flex  m-2 md:mx-8">
-            <span className='text-5xl'> <GrMail/>   </span> 
-                <div class="mx-2">
-                    <div class="text-xl font-semibold ">Send us an email</div>
-                    <div class=""><a href="mailto:ankitdubey588252gmail.com"> ankitdubey58825@gmail.com  </a></div>
+                <div className="contact-details">
+                  <h3>{item.title}</h3>
+                  <a href={item.link} className="contact-link">{item.content}</a>
                 </div>
-            </div>
-            <div class="flex  m-2 md:mx-8">
-            <span className='text-5xl'> <TbBrandZoom/>   </span> 
-                <div class="mx-2">
-                    <div class="text-xl font-semibold ">Come see us</div>
-                    <div class=" font-medium">Virtual Place On Zomm</div>
-                </div>
-            </div>
+              </div>
+            ))}
+          </div>
         </div>
-    </div>
 
-    {/*  follow on  */}
-    <div class="flex   flex-col items-start text-center align-middle  w-full"  id="cont" data-aos="zoom-in" data-aos-duration="1000">
-        <div class="text-2xl font-bold  my-2 ">Follow Me On 
+        {/* Social Links */}
+        <div className="social-section" data-aos="fade-up" data-aos-delay="400">
+          <h2 className="section-title">Follow My Journey</h2>
+          <div className="social-grid">
+            {socialLinks.map((social, index) => (
+              <a 
+                key={index} 
+                href={social.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="social-card"
+                data-aos="flip-left" 
+                data-aos-delay={index * 100}
+                style={{ '--hover-color': social.color }}
+              >
+                <div className="social-icon">
+                  {social.icon}
+                </div>
+                <div className="social-content">
+                  <h3>{social.title}</h3>
+                  <p>{social.subtitle}</p>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-start w-full md:w-3/4">
-            <div class="flex m-2 md:mx-8">
-            <span className='text-5xl'> <a href="https://www.instagram.com/iankitd/" > <GrInstagram/> </a>  </span> 
-                <div class="mx-2">
-                    <div class="text-xl font-semibold ">Follow On </div>
-                    <div class=" font-medium"> Vist Instagram </div>
-                </div>
-            </div>
-            <div class="flex  m-2 md:mx-8">
-     <span className='text-5xl'> <a href="https://github.com/ankitdevlop"><AiFillGithub/>  </a> </span> 
-                <div class="mx-2">
-                    <div class="text-xl font-semibold ">Visit Git Hub</div>
-                    <div class=""> Git-Hub </div>
-                </div>
-            </div>
-            <div class="flex  m-2 md:mx-8">
-     <span className='text-5xl'> <a href="https://twitter.com/dubey9850"><FiTwitter/>  </a> </span> 
-                <div class="mx-2">
-                    <div class="text-xl font-semibold ">Visit Twitter</div>
-                    <div class=""> Tiwtter </div>
-                </div>
-            </div>
-            <div class="flex  m-2 md:mx-8">
-            <span className='text-5xl'><a href="https://www.linkedin.com/in/ankit-dubey-799a1323a/"> <FaLinkedin/> </a>  </span> 
-                <div class="mx-2">
-                    <div class="text-xl font-semibold ">Visit LinkedIn</div>
-                    <div class=" font-medium">LinkedIn</div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-
-
-</div>
-</div>
-
-    </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

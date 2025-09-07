@@ -1,23 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Montserrat&display=swap');
+@import './styles/GlobalStyles.css';
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
+/* Hide scrollbar */
 body::-webkit-scrollbar {
-  width: 9px;
-  border-radius: 12px; 
+  display: none;
 }
 
-body::-webkit-scrollbar-track {
-  border: 1px solid black;
-  background-color: #F5F5F5;
-  border-radius: 23px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #2b124C;
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 @tailwind base;
 @tailwind components;
@@ -33,97 +29,89 @@ transition: 0.2s ease-out;
   width: 70px;
 }
 nav{
-  
-  box-shadow: 6px 0px 19px  black;
-  border-radius: 12px;
-  border: 3px solid rgba(205, 201, 201, 0.296);
-width: 350px;
-background: #383434b2;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  max-width: 350px;
+  width: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #navB{
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
+}
 
- 
+#navB nav {
+  pointer-events: all;
 }
 li{
   cursor: pointer;
-  margin-right: 10px;
-  margin-left: 6px;
-  width: 70px;
-  font-weight: bolder;
-  color: antiquewhite;
+  margin: 0 2px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+  min-width: auto;
 }
 
-
-
-
+li:hover{
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
 @media (max-width: 768px) {
-  
   li{
-    width:49px;
-    font-weight: bold;
-    font-size: 12px;
+    padding: 6px 8px;
+    font-size: 11px;
+    margin: 0 1px;
   }
   nav{
-    width: 19rem;
+    max-width: calc(100vw - 40px);
+    padding: 6px 12px;
+    margin: 0 10px;
   }
- 
-  
-}
-.main{
-  width: 100%;
-  height: 100vh;
-}
-video{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  #navB {
+    padding: 0 10px;
+  }
 }
 
-
-
-.title a {
-  margin-top: 117px;
+@media (max-width: 480px) {
+  li{
+    padding: 5px 6px;
+    font-size: 10px;
+    margin: 0;
+  }
+  nav{
+    max-width: calc(100vw - 20px);
+    padding: 5px 8px;
+    margin: 0 5px;
+  }
 }
-.title{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  text-shadow: 2,2,23,white;
-  top: 0;
-  position: absolute;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  font-weight: bolder;
-
-  color: rgb(225, 255, 226);
-}
-.title h1{
-  font-size: 45px;
-  font-weight: bolder;
-
-}
-.title h4{
-  font-size: 45px;
-  font-weight: bolder;
-
-}
+/* Old Live component styles removed - now in Live.css */
 
 
 
 
-/* about */
-
-#about{
-  background: #202122;
-  height: 100%;
-  margin-top: -23px;
-}
+/* about - styles moved to About.css */
 #contact{
   color: #eee6e6;
   background: #202122;
@@ -145,82 +133,13 @@ video{
  background: #202122;
   margin-top: -23px;
 }
-.passion h1{
-  font-size: 45px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-
-
-}
-
-
-  .gradient-text {
-    background-image: linear-gradient(45deg, #ffe4e4, #ffffff); /* Define your gradient colors here */
-    -webkit-background-clip: text; /* For webkit browsers like Chrome and Safari */
-    background-clip: text;
-    color: transparent; /* Make the text transparent so the gradient shows through */
-  }
-
-  .passion p{
-    color: white;
-    font-weight: bold;
-    margin-left: 39px;
-    margin-top: 12px;
-    font-size: 20px;
-  }
-  .education{
-    margin-top: 23px;
-    color: #ffffff;
-  }
-  .education h1{
-    font-size: 45px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  margin-bottom: 23px;
-  display: flex;
-  text-align: center;
-  background-image: linear-gradient(45deg, #ffe4e4, #ffffff); /* Define your gradient colors here */
-  -webkit-background-clip: text; /* For webkit browsers like Chrome and Safari */
-  background-clip: text;
-  color: transparent; /* Make the text transparent so the gradient shows through */
-
-  }
-  .education img{
-    width: 300px;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-
-  }
-  .education p{
-    margin-left: 12rem;
-    font-size: 22px;
-
-  }
+/* Old About styles removed - now in About.css */
 #cont{
   color: white;
 }
   @media (max-width: 768px) {
-    .education img{
-      width: 270px;
-      height:270px;
-      margin-left: 2rem;
-  
-    }
-    .education p{
-      margin-top: 23px;
-      margin-left: 2rem;
-      font-size: 19px;
-  
-    }
-
     #contact{
-
        height:700px;
-   
     }
   }
 
@@ -239,95 +158,50 @@ video{
   background-clip: text;
   color: transparent; /* Make the text transparent so the gradient shows through */
 }
-.skills{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  justify-content: space-around;
-  
-}
-.skills img{
-  width: 50px;
-  height: 55px;
-  margin-left: 12px;
-  background: white;
-}
-.ar{
-  margin-left: 23px;
-  font-size: 45px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  margin-bottom: 23px;
-  display: flex;
-  text-align: center;
-  background-image: linear-gradient(45deg, #ffe4e4, #ffffff); /* Define your gradient colors here */
-  -webkit-background-clip: text; /* For webkit browsers like Chrome and Safari */
-  background-clip: text;
-  color: transparent; /* Make the text transparent so the gradient shows through */
-}
-.skills img{
-  box-shadow: 1px 0px 12px ghostwhite;
-  border-radius: 16px;
-  margin-left: 12px;
- width: 70px;
- height: 70px;
-
-}
-.skills img:hover{
- width: 90px;
- height: 90px;
- overflow: hidden;
- transition: 0.4s;
-}
-
-@media (max-width: 768px) {
-  .skills{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-  }
-  .skills img{
-    margin-top: 12px;
-  }
-  
-
-}
-.info p{
-  color: white;
-}
-.info img{
-  border-radius: 10px;
-}
+/* Old skills and info styles removed - now in About.css */
 button{
-  background: #000;
-  width: 120px;
-  color: wheat;
-  font-weight: bold;
-  
-
-  border-radius: 9px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
 }
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
 button:hover{
-  background: #676161;
-
-  border-radius: 9px;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
 }
+
 .cv{
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 23px;
-  margin-bottom: 33px;
+  margin: 2rem 0;
 }
+
 .cv button{
-  width: 120px;
+  min-width: 150px;
   height: 50px;
 }
 
@@ -431,15 +305,7 @@ font-size: 22px;
 }
 
 
-.tit2{
-  margin-top: 23px;
-color:rgb(236, 203, 203);
-text-shadow: 9px 12px 12px rgb(32, 19, 19);
-font-weight: bolder;
-font-size: 45px;
-animation: animate 3s ease-in-out infinite;
-
-}
+/* Old tit2 styles removed - now in Live.css */
 
 
 * {
@@ -472,56 +338,7 @@ animation: animate 3s ease-in-out infinite;
   z-index: 999;
 }
 
-#scroll-down-animation {
-  position: absolute;
-  top: 91%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-h2 {
-  color: #fff;
-  font-family: 'Roboto', 'Arial', sans-serif;
-  font-weight: 200;
-  font-size: 16px;
-}
-
-
-.mouse {
-  margin: 0 auto;
-  display: block;
-  border-radius: 50px;
-  border: 2px solid #fff;
-  height: 100px;
-  width: 50px;
-  position: relative;
-}
-
-.move {
-  position: absolute;
-  background-color: #fff;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: move 2s linear infinite;
-}
-
-@keyframes move {
-  0% {
-    transform: translate(-50%,10px);
-    opacity: 0;
-  }
-  50% {
-    transform: translate(-50%,40px);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%,80px);
-    opacity: 0;
-  }
-}
+/* Old scroll animation styles removed - now in Live.css */
 @media only screen and (max-width: 768px) {
 
 }
